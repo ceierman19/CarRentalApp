@@ -52,8 +52,8 @@ namespace CarRentalApp
         // The grid is automatically populated when the form is loaded and when changes are made through the form
         // Refresh button is included so changes made to the database can be seen 
         // However, when a new user is added to the Users table in the database, they are not assigned to a role
-        // These users are unable to login b/c of the _roleName property in MainWindow 
-        // Conclusion: Do not add new users directly in the database 
+        // To ensure these users will be able to login, they must be assigned a role in the UserRoles table (match their UserId with a RoleId) 
+        // It is "simpler" to add users and assign them roles through the UI (by running the CarRentalApp program) 
         // Next time, see if adding a Role Name column in the users table fixes this 
         // The Refresh button here is mostly for reference 
         private void btnRefreshUsers_Click(object sender, EventArgs e)
