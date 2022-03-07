@@ -34,10 +34,10 @@
             this.viewArchiveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addRentalRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.statusStripMainWindow = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelMainWindow = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
+            this.statusStripMainWindow.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -49,14 +49,14 @@
             this.manageUsersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1063, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1329, 38);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // manageVehicleListingToolStripMenuItem
             // 
             this.manageVehicleListingToolStripMenuItem.Name = "manageVehicleListingToolStripMenuItem";
-            this.manageVehicleListingToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
+            this.manageVehicleListingToolStripMenuItem.Size = new System.Drawing.Size(175, 34);
             this.manageVehicleListingToolStripMenuItem.Text = "Manage Vehicle Listing";
             this.manageVehicleListingToolStripMenuItem.Click += new System.EventHandler(this.manageVehicleListingToolStripMenuItem_Click);
             // 
@@ -66,7 +66,7 @@
             this.viewArchiveToolStripMenuItem,
             this.addRentalRecordToolStripMenuItem});
             this.manageRentalRecordsToolStripMenuItem.Name = "manageRentalRecordsToolStripMenuItem";
-            this.manageRentalRecordsToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.manageRentalRecordsToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
             this.manageRentalRecordsToolStripMenuItem.Text = "Manage Rental Records";
             // 
             // viewArchiveToolStripMenuItem
@@ -86,32 +86,31 @@
             // manageUsersToolStripMenuItem
             // 
             this.manageUsersToolStripMenuItem.Name = "manageUsersToolStripMenuItem";
-            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(116, 26);
+            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(116, 34);
             this.manageUsersToolStripMenuItem.Text = "Manage Users";
             this.manageUsersToolStripMenuItem.Click += new System.EventHandler(this.manageUsersToolStripMenuItem_Click);
             // 
-            // statusStrip1
+            // statusStripMainWindow
             // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusStripMainWindow.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStripMainWindow.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelMainWindow});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 541);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1063, 24);
-            this.statusStrip1.TabIndex = 4;
-            this.statusStrip1.Text = "statusStrip1";
+            this.statusStripMainWindow.Location = new System.Drawing.Point(0, 676);
+            this.statusStripMainWindow.Name = "statusStripMainWindow";
+            this.statusStripMainWindow.Size = new System.Drawing.Size(1329, 30);
+            this.statusStripMainWindow.TabIndex = 8;
             // 
             // toolStripStatusLabelMainWindow
             // 
             this.toolStripStatusLabelMainWindow.Name = "toolStripStatusLabelMainWindow";
-            this.toolStripStatusLabelMainWindow.Size = new System.Drawing.Size(0, 18);
+            this.toolStripStatusLabelMainWindow.Size = new System.Drawing.Size(0, 24);
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1063, 565);
-            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.statusStripMainWindow);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -123,8 +122,8 @@
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
+            this.statusStripMainWindow.ResumeLayout(false);
+            this.statusStripMainWindow.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,7 +137,7 @@
         private System.Windows.Forms.ToolStripMenuItem addRentalRecordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewArchiveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageUsersToolStripMenuItem;
-        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.StatusStrip statusStripMainWindow;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelMainWindow;
     }
 }

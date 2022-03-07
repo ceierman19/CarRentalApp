@@ -12,7 +12,7 @@ namespace CarRentalApp
 {
     public partial class frmAddEditRentalRecord : Form
     {
-        private bool isEditMode;
+        private bool _isEditMode;
         private frmManageRentalRecords _frmManageRentalRecords;
         private readonly CarRentalEntities1 _db = new CarRentalEntities1(); 
 
@@ -21,7 +21,7 @@ namespace CarRentalApp
             InitializeComponent();
             this.Text = "Add Rental Record";  // Changes form name 
             lblAddEditRentalRecord.Text = "Add Rental Record";  // Changes label/title 
-            isEditMode = false;
+            _isEditMode = false;
             _frmManageRentalRecords = frmManageRentalRecords;
         }
         
@@ -32,7 +32,7 @@ namespace CarRentalApp
             this.Text = "Edit Rental Record"; 
             lblAddEditRentalRecord.Text = "Edit Rental Record";
             _frmManageRentalRecords = frmManageRentalRecords;
-            isEditMode = true;
+            _isEditMode = true;
             PopulateFields(rentalRecordToEdit); 
         }
 
@@ -72,7 +72,7 @@ namespace CarRentalApp
                 if (dateOut > dateIn)
                 {
                     isValid = false;
-                    errorMessage += "Error: Invalid Date Selection\n\r";
+                    errorMessage += "Error: Invalid Date Selection.\n\r";
                 }
 
                 if (string.IsNullOrWhiteSpace(carType))
@@ -88,7 +88,7 @@ namespace CarRentalApp
                     
                     // If editing, get the Id and retrieve the record from the database and place 
                     // the result in the rentalRecord object 
-                    if (isEditMode)
+                    if (_isEditMode)
                     {
                         int id = int.Parse(lblRecordId.Text);
                         rentalRecord = _db.CarRentalRecords.FirstOrDefault(q => q.Id == id);
@@ -102,7 +102,7 @@ namespace CarRentalApp
                     rentalRecord.TypeOfCarId = (int)cboTypeOfCar.SelectedValue;
 
                     // If not editing, add the rentalRecord object to the database 
-                    if (!isEditMode)
+                    if (!_isEditMode)
                     {
                         _db.CarRentalRecords.Add(rentalRecord);
                     }

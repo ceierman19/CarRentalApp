@@ -45,7 +45,7 @@ namespace CarRentalApp
 
             dgvUsers.DataSource = users;
             dgvUsers.Columns["Name"].HeaderText = "Role Name"; 
-            dgvUsers.Columns["isActive"].HeaderText = "Status";
+            dgvUsers.Columns["isActive"].HeaderText = "Active";
             dgvUsers.Columns["Id"].Visible = false; 
         }
 

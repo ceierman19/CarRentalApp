@@ -12,7 +12,7 @@ namespace CarRentalApp
 {
     public partial class frmAddEditVehicle : Form
     {
-        private bool isEditMode;
+        private bool _isEditMode;
         private frmManageVehicleListing _frmManageVehicleListing;
         private readonly CarRentalEntities1 _db = new CarRentalEntities1();
 
@@ -21,7 +21,7 @@ namespace CarRentalApp
             InitializeComponent();
             this.Text = "Add Vehicle";  // Changes form name 
             lblAddEditTitle.Text = "Add New Vehicle";  // Changes label/title 
-            isEditMode = false;
+            _isEditMode = false;
             _frmManageVehicleListing = frmManageVehicleListing;
         }
 
@@ -31,7 +31,7 @@ namespace CarRentalApp
             this.Text = "Edit Vehicle";
             lblAddEditTitle.Text = "Edit Vehicle";
             _frmManageVehicleListing = frmManageVehicleListing;
-            isEditMode = true;
+            _isEditMode = true;
             PopulateFields(carToEdit);
         }
 
@@ -56,7 +56,7 @@ namespace CarRentalApp
                 }
                 else
                 {
-                    if (isEditMode)
+                    if (_isEditMode)
                     {
                         // Edit Code here 
                         int id = int.Parse(lblId.Text);

@@ -94,7 +94,10 @@ namespace CarRentalApp
             if (_user.Password == Utils.DefaultHashedPassword())
             {
                 frmResetPassword resetPassword = new frmResetPassword(_user);
+                this.Hide();
+                _frmLogin.Hide(); 
                 resetPassword.ShowDialog();
+                this.Show(); 
             }
             
             // Shows which user is logged in 
